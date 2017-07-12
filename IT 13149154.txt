@@ -1,0 +1,1 @@
+IT 13149154K.L.Ashan Dulanja UdeshithaEDU HUB Mobile AppNote -: I try to connect SQLite DB as a login and registration but my cordova pluging gives me a error there for I comment that code part and try to build as a working product.

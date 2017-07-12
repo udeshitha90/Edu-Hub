@@ -1,0 +1,65 @@
+<ion-header>
+  <!--<ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>-->
+</ion-header>
+
+<ion-content  >
+ <ion-slides #signupSlider>
+   <!--login interface-->
+   <ion-slide>
+     <ion-list no-lines>
+ 
+    <form [formGroup]="LoginForm">
+ 
+        <ion-item style="padding-top: 100px">
+            <ion-label floating>User Name </ion-label>
+            <ion-input formControlName="firstName" type="text" [(ngModel)]="UserDetails.Uname"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+            <ion-label floating> Password</ion-label>
+            <ion-input formControlName="lastName" type="password" [(ngModel)]="UserDetails.Password"></ion-input>
+        </ion-item>
+         <br>
+            <button ion-button Outline color="primary" (click)="login(UserDetails)">Login </button>
+    </form>
+   
+ <button ion-button  clear  color="primary" (click)="next()">Create Account!</button>
+</ion-list>
+   </ion-slide>
+   <!--User registration-->
+   <ion-slide>
+       <ion-list no-lines>
+ 
+            <form [formGroup]="SingupForm">
+ 
+                <ion-item>
+                    <ion-label floating>Username</ion-label>
+                    <ion-input formControlName="username" (ngModel)="UserDetails.Uname" type="text"></ion-input>
+                </ion-item>
+ 
+                <ion-item>
+      <ion-label floating>Email address</ion-label>
+      <ion-input type="email"  (ngModel)="UserDetails.Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Address</ion-label>
+      <ion-input type="text"   (ngModel)="UserDetails.Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"   (ngModel)="UserDetails.Password"></ion-input>
+    </ion-item>
+                  <br>
+            <button ion-button Outline   color="primary" (click)="CreateAccount(UserDetails)">Create Account!</button>
+            </form>
+ 
+        </ion-list>
+ 
+        <button ion-button clear color="primary" (click)="prev()">You have an account ? Login</button>
+   </ion-slide>
+ </ion-slides>
+</ion-content>
